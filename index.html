@@ -1,0 +1,33 @@
+
+<!DOCTYPE html>
+<html ng-app="app">
+  <head>
+    <meta charset="utf-8">
+    <title>testing</title>
+
+    <script src="node_modules/angular/angular.js" charset="utf-8"></script>
+
+    <script src="app.js" charset="utf-8"></script>
+    <script src="controller.js" charset="utf-8"></script>
+    <script src="service.js" charset="utf-8"></script>
+  </head>
+  <body ng-controller="mainController">
+    <input type="text" ng-model="UserPrefences.language">
+
+
+
+  <!-- toggle our values of our user Object -->
+    <div ng-if="UserPrefences.technology">
+      Tech:<button ng-click="turnOffTech()">OFF</button>
+    </div>
+    <div ng-if="!UserPrefences.technology">
+      Tech:<button ng-click="turnOnTech()">ON</button>
+    </div>
+    <div ng-if="UserPrefences.business">Business:<button ng-click="turnOffBus()">OFF</button></div>
+    <div ng-if="!UserPrefences.business">Business:<button ng-click="turnOnBus()">ON</button></div>
+
+
+    <button ng-click="logObj()">log</button>
+
+  </body>
+</html>
